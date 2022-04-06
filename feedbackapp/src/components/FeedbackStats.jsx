@@ -1,6 +1,9 @@
-import PropTypes from "prop-types";
 
-function FeedbacKStats({ feedback }) {
+import { useContext } from "react";
+import FeedbackContext from "../context/FeedbackContext";
+
+function FeedbacKStats() {
+  const { feedback } = useContext(FeedbackContext);
   //calculate average stats
 
   let average =
@@ -19,8 +22,5 @@ function FeedbacKStats({ feedback }) {
   );
 }
 
-FeedbacKStats.propTypes = {
-  feedback: PropTypes.array.isRequired,
-};
 
 export default FeedbacKStats;
